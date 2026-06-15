@@ -1,0 +1,36 @@
+model_name_or_path: /root/autodl-tmp/gui-grounding-agent/models/Qwen2.5-7B-Instruct
+trust_remote_code: true
+
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target: q_proj,k_proj,v_proj,o_proj
+
+dataset_dir: /root/autodl-tmp/gui-grounding-agent/external/LLaMA-Factory/data
+dataset: finqa_toolcall_train_full
+template: qwen
+cutoff_len: 4096
+overwrite_cache: true
+preprocessing_num_workers: 2
+dataloader_num_workers: 2
+
+output_dir: /root/autodl-tmp/gui-grounding-agent/saves/finqa/qwen25-7b-finqa-toolcall-full-sft
+overwrite_output_dir: true
+logging_steps: 10
+save_steps: 100
+save_total_limit: 2
+plot_loss: true
+
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-4
+num_train_epochs: 1.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+bf16: true
+gradient_checkpointing: true
+
+val_size: 0.0
