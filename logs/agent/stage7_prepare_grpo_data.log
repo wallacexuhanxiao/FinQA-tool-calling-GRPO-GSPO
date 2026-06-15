@@ -1,0 +1,19 @@
+{
+  "num_samples": 4600,
+  "wrong_available": 1871,
+  "correct_available": 4380,
+  "keyword_available": 4956,
+  "requested": {
+    "wrong": 1800,
+    "anchor": 1200,
+    "keyword": 800,
+    "replay": 800
+  },
+  "actual_counts": {
+    "stage6_correct_anchor": 1200,
+    "stage6_wrong": 1800,
+    "agent_replay": 800,
+    "keyword_hard": 800
+  },
+  "out_jsonl": "data/agent/processed/stage7/agent_stage7_finqa_grpo_balanced.jsonl"
+}
