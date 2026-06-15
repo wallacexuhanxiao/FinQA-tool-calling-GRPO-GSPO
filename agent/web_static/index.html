@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Qwen Financial Tool Agent</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: #f6f7f9; color: #17202a; }
+    .app { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(360px, .85fr); min-height: 100vh; }
+    main { padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+    aside { border-left: 1px solid #dde2e8; background: #fff; padding: 24px; overflow: auto; }
+    h1 { font-size: 22px; margin: 0; }
+    .sub { color: #687385; margin: 4px 0 0; font-size: 14px; }
+    .chat { flex: 1; border: 1px solid #dce2ea; background: #fff; border-radius: 8px; padding: 18px; overflow: auto; min-height: 420px; }
+    .msg { max-width: 860px; margin: 0 0 14px; padding: 12px 14px; border-radius: 8px; line-height: 1.55; white-space: pre-wrap; }
+    .user { margin-left: auto; background: #e8f1ff; border: 1px solid #c9ddff; }
+    .assistant { background: #f4f6f8; border: 1px solid #e0e5eb; }
+    .composer { display: flex; gap: 10px; }
+    textarea { flex: 1; min-height: 58px; max-height: 160px; resize: vertical; padding: 12px; border-radius: 8px; border: 1px solid #cfd7e2; font: inherit; }
+    button { width: 112px; border: 0; border-radius: 8px; background: #165dff; color: white; font-weight: 650; cursor: pointer; }
+    button:disabled { background: #8aa8df; cursor: wait; }
+    .examples { display: flex; flex-wrap: wrap; gap: 8px; }
+    .examples button { width: auto; background: #fff; color: #2451a6; border: 1px solid #c8d6f3; padding: 8px 10px; }
+    .trace-title { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .trace { display: flex; flex-direction: column; gap: 12px; }
+    .step { border: 1px solid #dfe5ec; border-radius: 8px; padding: 12px; background: #fbfcfe; }
+    .step h3 { margin: 0 0 8px; font-size: 14px; }
+    .kv { color: #5f6f83; font-size: 13px; margin-bottom: 8px; }
+    pre { margin: 0; overflow: auto; white-space: pre-wrap; word-break: break-word; background: #f2f4f7; border-radius: 6px; padding: 10px; font-size: 12px; }
+    .empty { color: #7a8797; font-size: 14px; }
+    @media (max-width: 920px) { .app { grid-template-columns: 1fr; } aside { border-left: 0; border-top: 1px solid #dde2e8; } }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <main>
+      <header>
+        <h1>Qwen Financial Tool Agent</h1>
+        <p class="sub">vLLM inference + FastAPI controller + live tools + calculator</p>
+      </header>
+      <div class="examples">
+        <button data-q="特斯拉和苹果现在的市值差是多少？请先查实时市值，再调用计算器计算，最后用万亿美元回答绝对差值。">市值差</button>
+        <button data-q="Use market_data to get Microsoft and NVIDIA market caps, then use calculator to compute NVIDIA minus Microsoft in trillion USD.">英伟达 vs 微软</button>
+        <button data-q="Use web_search with max_results 5 and top_k 3 to look up LangChain framework official, then summarize what LangChain is in one sentence.">Web RAG</button>
+      </div>
+      <section id="chat" class="chat"></section>
+      <form id="form" class="composer">
+        <textarea id="input" placeholder="输入一个需要查资料、调用 API 或计算的问题..."></textarea>
+        <button id="send" type="submit">发送</button>
+      </form>
+    </main>
+    <aside>
+      <div class="trace-title">
+        <h2>Tool Trace</h2>
+        <span id="status" class="empty">ready</span>
+      </div>
+      <div id="trace" class="trace"><p class="empty">工具调用会显示在这里。</p></div>
+    </aside>
+  </div>
+  <script>
+    const chat = document.querySelector("#chat");
+    const trace = document.querySelector("#trace");
+    const statusEl = document.querySelector("#status");
+    const form = document.querySelector("#form");
+    const input = document.querySelector("#input");
+    const send = document.querySelector("#send");
+    const history = [];
+
+    function addMessage(role, text) {
+      const div = document.createElement("div");
+      div.className = `msg ${role}`;
+      div.textContent = text;
+      chat.appendChild(div);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    function renderTrace(steps) {
+      trace.innerHTML = "";
+      if (!steps || !steps.length) {
+        trace.innerHTML = '<p class="empty">没有工具调用。</p>';
+        return;
+      }
+      for (const step of steps) {
+        const el = document.createElement("div");
+        el.className = "step";
+        const title = step.tool_name ? `Turn ${step.turn}: ${step.tool_name}` : `Turn ${step.turn}: final`;
+        const args = step.tool_args ? JSON.stringify(step.tool_args, null, 2) : "";
+        const obs = step.observation ? JSON.stringify(step.observation, null, 2) : JSON.stringify(step.parsed, null, 2);
+        el.innerHTML = `<h3>${title}</h3><div class="kv">${args ? "Arguments" : "Model Output"}</div><pre>${args || JSON.stringify(step.parsed, null, 2)}</pre><div class="kv">Observation</div><pre>${obs}</pre>`;
+        trace.appendChild(el);
+      }
+    }
+
+    async function ask(text) {
+      addMessage("user", text);
+      history.push({ role: "user", content: text });
+      send.disabled = true;
+      statusEl.textContent = "running";
+      try {
+        const res = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: text, history: history.slice(0, -1), max_turns: 8 })
+        });
+        const data = await res.json();
+        const answer = data.answer || data.error || "No answer";
+        addMessage("assistant", answer);
+        history.push({ role: "assistant", content: answer });
+        renderTrace(data.trace || []);
+        statusEl.textContent = data.ok ? "done" : "error";
+      } catch (err) {
+        addMessage("assistant", String(err));
+        statusEl.textContent = "error";
+      } finally {
+        send.disabled = false;
+      }
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = "";
+      ask(text);
+    });
+    document.querySelectorAll(".examples button").forEach(btn => {
+      btn.addEventListener("click", () => ask(btn.dataset.q));
+    });
+  </script>
+</body>
+</html>
