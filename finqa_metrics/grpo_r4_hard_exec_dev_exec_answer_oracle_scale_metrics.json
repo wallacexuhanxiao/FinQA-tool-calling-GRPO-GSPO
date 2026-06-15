@@ -1,0 +1,192 @@
+{
+  "num_samples": 883,
+  "json_valid_rate": 1.0,
+  "answer_nonempty_rate": 0.9898074745186863,
+  "program_nonempty_rate": 1.0,
+  "answer_exact_match": 0.24235560588901472,
+  "numeric_total": 874,
+  "numeric_accuracy_at_1pct": 0.6624713958810069,
+  "numeric_accuracy_at_5pct": 0.7448512585812357,
+  "bad_preview": [
+    {
+      "question": "what was the gross margin decline in fiscal 2004 from 2003?",
+      "gold": ".2",
+      "pred_answer": "-2e-07",
+      "raw": "{\"program\": \"subtract(27.3%, 27.5%)\", \"answer\": \"-2e-07\"}"
+    },
+    {
+      "question": "if current development costs increased in 2008 as much as in 2007 , what would the 2008 total be , in millions?",
+      "gold": "2057",
+      "pred_answer": "2905",
+      "raw": "{\"program\": \"add(1654, 1251)\", \"answer\": \"2905\"}"
+    },
+    {
+      "question": "in 2010 what was the percentage change of the carrying amount of loan receivable net of the allowance",
+      "gold": "-52.5%",
+      "pred_answer": "-49.02173913",
+      "raw": "{\"program\": \"subtract(469, 920), divide(#0, 920)\", \"answer\": \"-49.02173913\"}"
+    },
+    {
+      "question": "what is the decline from current future minimum lease payments and the following years expected obligation?\\\\n",
+      "gold": "25%",
+      "pred_answer": "3.32",
+      "raw": "{\"program\": \"subtract(1703, 1371)\", \"answer\": \"3.32\"}"
+    },
+    {
+      "question": "what is the average amortization amount , in millions , from 2015-2019?",
+      "gold": "44.8",
+      "pred_answer": "1.145",
+      "raw": "{\"program\": \"add(45, 45), add(#0, 45), add(#1, 45), add(#2, 44), add(#3, const_5), divide(#4, const_2)\", \"answer\": \"1.145\"}"
+    },
+    {
+      "question": "what percent of inventory is ready for liquidation ( sale ) in 2003?",
+      "gold": ".7283",
+      "pred_answer": "0.02217168846",
+      "raw": "{\"program\": \"divide(11.7, 527.7)\", \"answer\": \"0.02217168846\"}"
+    },
+    {
+      "question": "for the period ending in 2016 , what was the average amount of settlements , in millions?",
+      "gold": "11.3",
+      "pred_answer": "16",
+      "raw": "{\"program\": \"add(13, 19), divide(#0, const_2)\", \"answer\": \"16\"}"
+    },
+    {
+      "question": "what was the difference in dollars of the high low sale price for the common stock in the fourth quarter of 2002?",
+      "gold": "2.62",
+      "pred_answer": "0.1689",
+      "raw": "{\"program\": \"subtract(17.84, 0.95)\", \"answer\": \"0.1689\"}"
+    },
+    {
+      "question": "what is the percentage change in total debt from 2014 to 2015?",
+      "gold": "3.4%",
+      "pred_answer": "-3.389830508e-08",
+      "raw": "{\"program\": \"subtract(28.5, 29.5), divide(#0, 29.5)\", \"answer\": \"-3.389830508e-08\"}"
+    },
+    {
+      "question": "what was the difference in operating profit for the americas as a percentage of net sales between 2001 and 2003?",
+      "gold": "3.8",
+      "pred_answer": "0.9",
+      "raw": "{\"program\": \"subtract(48.3%, 47.4%)\", \"answer\": \"0.9\"}"
+    },
+    {
+      "question": "what are the annual other sinking fund requirements as a percentage of annual long-term debt maturities ( excluding lease obligations ) and annual cash sinking fund requirements for debt outstanding in 2007?",
+      "gold": "6.35%",
+      "pred_answer": "0.06354042181",
+      "raw": "{\"program\": \"divide(30.2, 475288)\", \"answer\": \"0.06354042181\"}"
+    },
+    {
+      "question": "on february 112011 what was the market capitalization",
+      "gold": "22556579533.3",
+      "pred_answer": "2.255657953e+10",
+      "raw": "{\"program\": \"multiply(56.73, 397612895)\", \"answer\": \"2.255657953e+10\"}"
+    },
+    {
+      "question": "what was the total of euro notes issued in 2014 , in millions of dollars approximately?",
+      "gold": "3098",
+      "pred_answer": "2401",
+      "raw": "{\"program\": \"add(1029, 1372)\", \"answer\": \"2401\"}"
+    },
+    {
+      "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+      "gold": "-6806",
+      "pred_answer": "-4088.333333",
+      "raw": "{\"program\": \"add(-6129, -3929), add(#0, -2207), divide(#1, const_3)\", \"answer\": \"-4088.333333\"}"
+    },
+    {
+      "question": "what percentage of the total purchase price is represented by goodwill?",
+      "gold": "22%",
+      "pred_answer": "0.216505349",
+      "raw": "{\"program\": \"divide(3.4, 15704)\", \"answer\": \"0.216505349\"}"
+    },
+    {
+      "question": "what was the percentage change of our accrued trade liabilities in 2019 compared to 2018",
+      "gold": "-16",
+      "pred_answer": "-3.2",
+      "raw": "{\"program\": \"subtract(484, 500), divide(#0, 500)\", \"answer\": \"-3.2\"}"
+    },
+    {
+      "question": "what percent higher is the average var for foreign exchange products than that of interest rate products?",
+      "gold": "1.25",
+      "pred_answer": "0.6363636364",
+      "raw": "{\"program\": \"divide(1.8, 1.1), subtract(#0, const_1)\", \"answer\": \"0.6363636364\"}"
+    },
+    {
+      "question": "what are the total contingent payments relating to impella?",
+      "gold": "5583331",
+      "pred_answer": "167500",
+      "raw": "{\"program\": \"add(5583333, 5583333), add(#0, 5583334)\", \"answer\": \"167500\"}"
+    },
+    {
+      "question": "what portion of the total investment is allocated to mutual funds in 2011?",
+      "gold": "65.1%",
+      "pred_answer": "34.92237789",
+      "raw": "{\"program\": \"divide(9223, 26410)\", \"answer\": \"34.92237789\"}"
+    },
+    {
+      "question": "based on a 365 day year and the average sales price per barrel listed above , what was the total refined product sales revenue for 2006?",
+      "gold": "40444920",
+      "pred_answer": "10894176",
+      "raw": "{\"program\": \"multiply(1.401, const_1000), multiply(#0, 77.76)\", \"answer\": \"10894176\"}"
+    },
+    {
+      "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to tower cash flow?",
+      "gold": "105.0%",
+      "pred_answer": "26.24750386",
+      "raw": "{\"program\": \"divide(139590, 531822)\", \"answer\": \"26.24750386\"}"
+    },
+    {
+      "question": "what was the percentage change in the unrecognized tax benefits from 2015 to 2016?",
+      "gold": "-1%",
+      "pred_answer": "-1.072386059",
+      "raw": "{\"program\": \"subtract(369, 373), divide(#0, 373)\", \"answer\": \"-1.072386059\"}"
+    },
+    {
+      "question": "what is the carrying value of notes due by 2017 ? in millions $ .",
+      "gold": "2448",
+      "pred_answer": "1450",
+      "raw": "{\"program\": \"add(750, 700)\", \"answer\": \"1450\"}"
+    },
+    {
+      "question": "for the the quarter ended december 31 , 2006 what was the percent of the total number of shares purchased bought in october",
+      "gold": "48.2%",
+      "pred_answer": "20.10959889",
+      "raw": "{\"program\": \"divide(447700, 2226300)\", \"answer\": \"20.10959889\"}"
+    },
+    {
+      "question": "what are the total contractual commitments , in millions?",
+      "gold": "40294",
+      "pred_answer": "20147",
+      "raw": "{\"program\": \"add(10690, 9457)\", \"answer\": \"20147\"}"
+    },
+    {
+      "question": "what was the difference in percentage return for pmi common stock compared to the s&p 500 index for the five years ended 2018?",
+      "gold": "53.8%",
+      "pred_answer": "-5.38e-07",
+      "raw": "{\"program\": \"subtract(96.50, const_100), divide(#0, const_100), subtract(150.30, const_100), divide(#2, const_100), subtract(#1, #3)\", \"answer\": \"-5.38e-07\"}"
+    },
+    {
+      "question": "considering the years 2015-2016 , what is the decrease observed in the cash contributions to funded plans and benefit payments for unfunded plans?",
+      "gold": "-42.32%",
+      "pred_answer": "-58.2",
+      "raw": "{\"program\": \"subtract(79.3, 137.5)\", \"answer\": \"-58.2\"}"
+    },
+    {
+      "question": "considering the year 2018 , what is the cash flow result?",
+      "gold": "-454.2",
+      "pred_answer": "0.0010916",
+      "raw": "{\"program\": \"subtract(2547.2, 1455.6)\", \"answer\": \"0.0010916\"}"
+    },
+    {
+      "question": "what is the variation between the average and the highest operating margin?",
+      "gold": "2.53%",
+      "pred_answer": "1.8",
+      "raw": "{\"program\": \"subtract(11.4%, 7.8%), divide(#0, const_2)\", \"answer\": \"1.8\"}"
+    },
+    {
+      "question": "what is the estimated percentual decrease observed in the htm investment securities from 2017 to 2018 ? .",
+      "gold": "34.14%",
+      "pred_answer": "-3.414618817e-07",
+      "raw": "{\"program\": \"subtract(31434, 47733), divide(#0, 47733)\", \"answer\": \"-3.414618817e-07\"}"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "backend": "hf_transformers",
+  "model": "saves/finqa/qwen25-7b-finqa-toolcall-grpo-r32-scaled-full-merged",
+  "num_requests": 200,
+  "batch_size": 1,
+  "elapsed_sec": 116.96049951575696,
+  "requests_per_sec": 1.7099790170873537,
+  "output_tokens_per_sec": 63.56846996022237,
+  "latency_p50_sec": 0.5555523596704006,
+  "latency_p95_sec": 0.7450086381286383,
+  "latency_mean_sec": 0.5812374346610159
+}

@@ -1,0 +1,291 @@
+{
+  "num_samples": 883,
+  "tool_json_valid_rate": 1.0,
+  "tool_name_correct_rate": 1.0,
+  "program_nonempty_rate": 1.0,
+  "program_executable_rate": 0.9694224235560589,
+  "execution_acc_at_1pct": 0.6591166477916195,
+  "execution_acc_at_5pct": 0.7429218573046432,
+  "final_answer_exact_match": 0.19592298980747452,
+  "numeric_accuracy_at_1pct": 0.27519818799546997,
+  "numeric_accuracy_at_5pct": 0.2865232163080408,
+  "scaled_numeric_accuracy_at_1pct": 0.6591166477916195,
+  "scaled_numeric_accuracy_at_5pct": 0.7429218573046432,
+  "unsupported_op_count": {
+    "table_average": 14,
+    "table_min": 6,
+    "table_max": 7
+  },
+  "bad_examples": [
+    {
+      "id": "AAPL/2004/page_36.pdf-2",
+      "question": "what was the gross margin decline in fiscal 2004 from 2003?",
+      "gold": ".2",
+      "final_answer": "-0.2",
+      "program": "subtract(27.3%, 27.5%)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"subtract(27.3%, 27.5%)\"}}}"
+    },
+    {
+      "id": "MRO/2007/page_149.pdf-2",
+      "question": "if current development costs increased in 2008 as much as in 2007 , what would the 2008 total be , in millions?",
+      "gold": "2057",
+      "final_answer": "2905",
+      "program": "add(1654, 1251)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"add(1654, 1251)\"}}}"
+    },
+    {
+      "id": "C/2010/page_223.pdf-3",
+      "question": "in 2010 what was the percentage change of the carrying amount of loan receivable net of the allowance",
+      "gold": "-52.5%",
+      "final_answer": "-0.4902173913",
+      "program": "subtract(469, 920), divide(#0, 920)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"subtract(469, 920), divide(#0, 920)\"}}}"
+    },
+    {
+      "id": "ABMD/2006/page_75.pdf-1",
+      "question": "what is the decline from current future minimum lease payments and the following years expected obligation?\\\\n",
+      "gold": "25%",
+      "final_answer": "3116",
+      "program": "subtract(4819, 1703)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"subtract(4819, 1703)\"}}}"
+    },
+    {
+      "id": "DVN/2014/page_85.pdf-1",
+      "question": "what is the average amortization amount , in millions , from 2015-2019?",
+      "gold": "44.8",
+      "final_answer": "91.5",
+      "program": "add(45, 45), add(#0, 45), add(#1, 44), add(#2, const_4), divide(#3, const_2)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"add(45, 45), add(#0, 45), add(#1, 44), add(#2, const_4), divide(#3, const_2)\"}}}"
+    },
+    {
+      "id": "ZBH/2003/page_58.pdf-3",
+      "question": "what percent of inventory is ready for liquidation ( sale ) in 2003?",
+      "gold": ".7283",
+      "final_answer": "0.09967784726",
+      "program": "divide(52.6, 527.7)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"divide(52.6, 527.7)\"}}}"
+    },
+    {
+      "id": "AES/2016/page_191.pdf-3",
+      "question": "for the period ending in 2016 , what was the average amount of settlements , in millions?",
+      "gold": "11.3",
+      "final_answer": "",
+      "program": "table_average(settlements, none)",
+      "exec_error": "unsupported op table_average",
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"table_average(settlements, none)\"}}}"
+    },
+    {
+      "id": "PM/2015/page_85.pdf-1",
+      "question": "what is the percentage change in total debt from 2014 to 2015?",
+      "gold": "3.4%",
+      "final_answer": "-0.03389830508",
+      "program": "subtract(28.5, 29.5), divide(#0, 29.5)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"subtract(28.5, 29.5), divide(#0, 29.5)\"}}}"
+    },
+    {
+      "id": "ZBH/2003/page_40.pdf-1",
+      "question": "what was the difference in operating profit for the americas as a percentage of net sales between 2001 and 2003?",
+      "gold": "3.8",
+      "final_answer": "0.9",
+      "program": "subtract(48.3%, 47.4%)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"subtract(48.3%, 47.4%)\"}}}"
+    },
+    {
+      "id": "PM/2014/page_67.pdf-2",
+      "question": "what was the total of euro notes issued in 2014 , in millions of dollars approximately?",
+      "gold": "3098",
+      "final_answer": "2401",
+      "program": "add(1029, 1372)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"add(1029, 1372)\"}}}"
+    },
+    {
+      "id": "PM/2015/page_127.pdf-4",
+      "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+      "gold": "-6806",
+      "final_answer": "-4088.333333",
+      "program": "add(-6129, -3929), add(#0, -2207), divide(#1, const_3)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"add(-6129, -3929), add(#0, -2207), divide(#1, const_3)\"}}}"
+    },
+    {
+      "id": "GIS/2019/page_37.pdf-3",
+      "question": "what was the percentage change of our accrued trade liabilities in 2019 compared to 2018",
+      "gold": "-16",
+      "final_answer": "-0.032",
+      "program": "subtract(484, 500), divide(#0, 500)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"subtract(484, 500), divide(#0, 500)\"}}}"
+    },
+    {
+      "id": "STT/2008/page_83.pdf-2",
+      "question": "what percent higher is the average var for foreign exchange products than that of interest rate products?",
+      "gold": "1.25",
+      "final_answer": "0.6363636364",
+      "program": "divide(1.8, 1.1), subtract(#0, const_1)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"divide(1.8, 1.1), subtract(#0, const_1)\"}}}"
+    },
+    {
+      "id": "ABMD/2009/page_88.pdf-1",
+      "question": "what are the total contingent payments relating to impella?",
+      "gold": "5583331",
+      "final_answer": "16750000",
+      "program": "add(5583333, 5583333), add(#0, 5583334)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"add(5583333, 5583333), add(#0, 5583334)\"}}}"
+    },
+    {
+      "id": "ADI/2011/page_81.pdf-1",
+      "question": "what portion of the total investment is allocated to mutual funds in 2011?",
+      "gold": "65.1%",
+      "final_answer": "0.3492237789",
+      "program": "divide(9223, 26410)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"divide(9223, 26410)\"}}}"
+    },
+    {
+      "id": "MRO/2006/page_33.pdf-1",
+      "question": "based on a 365 day year and the average sales price per barrel listed above , what was the total refined product sales revenue for 2006?",
+      "gold": "40444920",
+      "final_answer": "108941.76",
+      "program": "multiply(1.401, const_1000), multiply(#0, 77.76)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"multiply(1.401, const_1000), multiply(#0, 77.76)\"}}}"
+    },
+    {
+      "id": "AMT/2005/page_54.pdf-2",
+      "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to tower cash flow?",
+      "gold": "105.0%",
+      "final_answer": "0.9868038554",
+      "program": "divide(524804, 531822)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"divide(524804, 531822)\"}}}"
+    },
+    {
+      "id": "AES/2016/page_191.pdf-2",
+      "question": "what was the percentage change in the unrecognized tax benefits from 2015 to 2016?",
+      "gold": "-1%",
+      "final_answer": "-0.01072386059",
+      "program": "subtract(369, 373), divide(#0, 373)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"subtract(369, 373), divide(#0, 373)\"}}}"
+    },
+    {
+      "id": "BLK/2013/page_124.pdf-2",
+      "question": "what is the carrying value of notes due by 2017 ? in millions $ .",
+      "gold": "2448",
+      "final_answer": "1445",
+      "program": "add(698, 747)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"add(698, 747)\"}}}"
+    },
+    {
+      "id": "AAPL/2008/page_78.pdf-2",
+      "question": "what was the average change in unrealized gains on derivative instruments?",
+      "gold": "5",
+      "final_answer": "9",
+      "program": "add(19, -3), add(-1, #0), add(#1, const_3), divide(#2, const_2)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"add(19, -3), add(-1, #0), add(#1, const_3), divide(#2, const_2)\"}}}"
+    },
+    {
+      "id": "LMT/2006/page_37.pdf-1",
+      "question": "for the the quarter ended december 31 , 2006 what was the percent of the total number of shares purchased bought in october",
+      "gold": "48.2%",
+      "final_answer": "0.2010959889",
+      "program": "divide(447700, 2226300)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"divide(447700, 2226300)\"}}}"
+    },
+    {
+      "id": "ABMD/2009/page_56.pdf-1",
+      "question": "what are the total contractual commitments , in millions?",
+      "gold": "40294",
+      "final_answer": "20.147",
+      "program": "divide(20147, const_1000)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"divide(20147, const_1000)\"}}}"
+    },
+    {
+      "id": "PM/2018/page_24.pdf-2",
+      "question": "what was the difference in percentage return for pmi common stock compared to the s&p 500 index for the five years ended 2018?",
+      "gold": "53.8%",
+      "final_answer": "-0.538",
+      "program": "subtract(96.50, const_100), divide(#0, const_100), subtract(150.30, const_100), divide(#2, const_100), subtract(#1, #3)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"subtract(96.50, const_100), divide(#0, const_100), subtract(150.30, const_100), divide(#2, const_100), subtract(#1, #3)\"}}}"
+    },
+    {
+      "id": "APD/2016/page_57.pdf-2",
+      "question": "considering the years 2015-2016 , what is the decrease observed in the cash contributions to funded plans and benefit payments for unfunded plans?",
+      "gold": "-42.32%",
+      "final_answer": "-58.2",
+      "program": "subtract(79.3, 137.5)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"subtract(79.3, 137.5)\"}}}"
+    },
+    {
+      "id": "APD/2019/page_48.pdf-2",
+      "question": "considering the year 2018 , what is the cash flow result?",
+      "gold": "-454.2",
+      "final_answer": "-3483.9",
+      "program": "add(-2113.4, -1370.5)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"add(-2113.4, -1370.5)\"}}}"
+    },
+    {
+      "id": "LMT/2017/page_80.pdf-1",
+      "question": "what was the average weighted average common shares outstanding for diluted computations from 2015 to 2017",
+      "gold": "302.8",
+      "final_answer": "",
+      "program": "table_average(290.6, 303.1), table_average(#0, 314.7)",
+      "exec_error": "unsupported op table_average",
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"table_average(290.6, 303.1), table_average(#0, 314.7)\"}}}"
+    },
+    {
+      "id": "JPM/2018/page_110.pdf-4",
+      "question": "what is the estimated percentual decrease observed in the htm investment securities from 2017 to 2018 ? .",
+      "gold": "34.14%",
+      "final_answer": "-0.3414618817",
+      "program": "subtract(31434, 47733), divide(#0, 47733)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"subtract(31434, 47733), divide(#0, 47733)\"}}}"
+    },
+    {
+      "id": "IPG/2008/page_62.pdf-1",
+      "question": "what is the average liability for all three programs , as of december 31 , 2008 , in millions?",
+      "gold": "4.27",
+      "final_answer": "",
+      "program": "table_average(liability at december 31 2008, none)",
+      "exec_error": "unsupported op table_average",
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"table_average(liability at december 31 2008, none)\"}}}"
+    },
+    {
+      "id": "MRO/2017/page_111.pdf-2",
+      "question": "what was purchases of reserves in place in 2016?",
+      "gold": "-13",
+      "final_answer": "33",
+      "program": "subtract(34, const_1)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"subtract(34, const_1)\"}}}"
+    },
+    {
+      "id": "PNC/2009/page_46.pdf-3",
+      "question": "did the share of securities rated aaa/aaa increase between 2008 and 2009?",
+      "gold": "no",
+      "final_answer": "-5",
+      "program": "subtract(14%, 19%)",
+      "exec_error": null,
+      "raw_output": "{\"tool_call\": {\"name\": \"calculator\", \"arguments\": {\"program\": \"subtract(14%, 19%)\"}}}"
+    }
+  ]
+}

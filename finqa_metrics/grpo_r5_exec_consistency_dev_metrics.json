@@ -1,0 +1,192 @@
+{
+  "num_samples": 883,
+  "json_valid_rate": 1.0,
+  "answer_nonempty_rate": 1.0,
+  "program_nonempty_rate": 1.0,
+  "answer_exact_match": 0.3929784824462061,
+  "numeric_total": 874,
+  "numeric_accuracy_at_1pct": 0.5812356979405034,
+  "numeric_accuracy_at_5pct": 0.7013729977116705,
+  "bad_preview": [
+    {
+      "question": "at the end of 2014 , the notional value of derivatives designated as hedging instruments under gaap was what percent of the fair value?",
+      "gold": "3044%",
+      "pred_answer": "30.3",
+      "raw": "{\"program\": \"divide(36197, 1189)\", \"answer\": \"30.3\"}"
+    },
+    {
+      "question": "what was the gross margin decline in fiscal 2004 from 2003?",
+      "gold": ".2",
+      "pred_answer": "-0.2%",
+      "raw": "{\"program\": \"subtract(27.3%, 27.5%)\", \"answer\": \"-0.2%\"}"
+    },
+    {
+      "question": "if current development costs increased in 2008 as much as in 2007 , what would the 2008 total be , in millions?",
+      "gold": "2057",
+      "pred_answer": "2905",
+      "raw": "{\"program\": \"add(1654, 1251)\", \"answer\": \"2905\"}"
+    },
+    {
+      "question": "in 2010 what was the percentage change of the carrying amount of loan receivable net of the allowance",
+      "gold": "-52.5%",
+      "pred_answer": "-49.5%",
+      "raw": "{\"program\": \"subtract(469, 920), divide(#0, 920)\", \"answer\": \"-49.5%\"}"
+    },
+    {
+      "question": "what is the decline from current future minimum lease payments and the following years expected obligation?\\\\n",
+      "gold": "25%",
+      "pred_answer": "332",
+      "raw": "{\"program\": \"subtract(1703, 1371)\", \"answer\": \"332\"}"
+    },
+    {
+      "question": "what was the ratio of the pension trust assets for 2017 to 2018",
+      "gold": "1.16",
+      "pred_answer": "1.1",
+      "raw": "{\"program\": \"divide(1739, 1572)\", \"answer\": \"1.1\"}"
+    },
+    {
+      "question": "what percent of inventory is ready for liquidation ( sale ) in 2003?",
+      "gold": ".7283",
+      "pred_answer": "2.2%",
+      "raw": "{\"program\": \"divide(11.7, 527.7)\", \"answer\": \"2.2%\"}"
+    },
+    {
+      "question": "what is the total value of net operating loss carryforwards?",
+      "gold": "4575515",
+      "pred_answer": "4.6",
+      "raw": "{\"program\": \"add(2.2, 2.4)\", \"answer\": \"4.6\"}"
+    },
+    {
+      "question": "for the period ending in 2016 , what was the average amount of settlements , in millions?",
+      "gold": "11.3",
+      "pred_answer": "16",
+      "raw": "{\"program\": \"add(13, 19), divide(#0, const_2)\", \"answer\": \"16\"}"
+    },
+    {
+      "question": "what was the difference in dollars of the high low sale price for the common stock in the fourth quarter of 2002?",
+      "gold": "2.62",
+      "pred_answer": "16.89",
+      "raw": "{\"program\": \"subtract(17.84, 0.95)\", \"answer\": \"16.89\"}"
+    },
+    {
+      "question": "what is the percentage change in total debt from 2014 to 2015?",
+      "gold": "3.4%",
+      "pred_answer": "-3.4%",
+      "raw": "{\"program\": \"subtract(28.5, 29.5), divide(#0, 29.5)\", \"answer\": \"-3.4%\"}"
+    },
+    {
+      "question": "what was the difference in operating profit for the americas as a percentage of net sales between 2001 and 2003?",
+      "gold": "3.8",
+      "pred_answer": "0.9%",
+      "raw": "{\"program\": \"subtract(48.3%, 47.4%)\", \"answer\": \"0.9%\"}"
+    },
+    {
+      "question": "what amount of long-term debt due in the next 36 months as of december 31 , 2003 , in millions?",
+      "gold": "1041.5",
+      "pred_answer": "1041531",
+      "raw": "{\"program\": \"add(503215, 462420), add(#0, 75896)\", \"answer\": \"1041531\"}"
+    },
+    {
+      "question": "what are the annual other sinking fund requirements as a percentage of annual long-term debt maturities ( excluding lease obligations ) and annual cash sinking fund requirements for debt outstanding in 2007?",
+      "gold": "6.35%",
+      "pred_answer": "0.063%",
+      "raw": "{\"program\": \"divide(30.2, 475288)\", \"answer\": \"0.063%\"}"
+    },
+    {
+      "question": "what percent increase did inventories receive between 2002 and 2003?",
+      "gold": "1.0485",
+      "pred_answer": "105%",
+      "raw": "{\"program\": \"subtract(527.7, 257.6), divide(#0, 257.6)\", \"answer\": \"105%\"}"
+    },
+    {
+      "question": "what was the total of euro notes issued in 2014 , in millions of dollars approximately?",
+      "gold": "3098",
+      "pred_answer": "2401",
+      "raw": "{\"program\": \"add(1029, 1372)\", \"answer\": \"2401\"}"
+    },
+    {
+      "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+      "gold": "-6806",
+      "pred_answer": "-4216",
+      "raw": "{\"program\": \"add(-6129, -3929), add(#0, -2207), divide(#1, const_3)\", \"answer\": \"-4216\"}"
+    },
+    {
+      "question": "what percentage of the total purchase price is represented by goodwill?",
+      "gold": "22%",
+      "pred_answer": "0.022%",
+      "raw": "{\"program\": \"divide(3.4, 15704)\", \"answer\": \"0.022%\"}"
+    },
+    {
+      "question": "what was the percentage change of our accrued trade liabilities in 2019 compared to 2018",
+      "gold": "-16",
+      "pred_answer": "-3.2%",
+      "raw": "{\"program\": \"subtract(484, 500), divide(#0, 500)\", \"answer\": \"-3.2%\"}"
+    },
+    {
+      "question": "what percent higher is the average var for foreign exchange products than that of interest rate products?",
+      "gold": "1.25",
+      "pred_answer": "63.6%",
+      "raw": "{\"program\": \"divide(1.8, 1.1), subtract(#0, const_1)\", \"answer\": \"63.6%\"}"
+    },
+    {
+      "question": "what are the cost reduction initiatives as a percentage of the operating companies income increase?",
+      "gold": "166%",
+      "pred_answer": "1.66",
+      "raw": "{\"program\": \"divide(198, 119)\", \"answer\": \"1.66\"}"
+    },
+    {
+      "question": "what are the total contingent payments relating to impella?",
+      "gold": "5583331",
+      "pred_answer": "16749999",
+      "raw": "{\"program\": \"add(5583333, 5583333), add(#0, 5583334)\", \"answer\": \"16749999\"}"
+    },
+    {
+      "question": "based on the investment in solexa on november 12 , 2006 what was the price per share in the transaction in dollars",
+      "gold": "9.7",
+      "pred_answer": "0.0097",
+      "raw": "{\"program\": \"divide(50, 5154639)\", \"answer\": \"0.0097\"}"
+    },
+    {
+      "question": "what portion of the total investment is allocated to mutual funds in 2011?",
+      "gold": "65.1%",
+      "pred_answer": "35%",
+      "raw": "{\"program\": \"divide(9223, 26410)\", \"answer\": \"35%\"}"
+    },
+    {
+      "question": "based on a 365 day year and the average sales price per barrel listed above , what was the total refined product sales revenue for 2006?",
+      "gold": "40444920",
+      "pred_answer": "109.1",
+      "raw": "{\"program\": \"multiply(1.401, const_1000), multiply(#0, 77.76)\", \"answer\": \"109.1\"}"
+    },
+    {
+      "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to tower cash flow?",
+      "gold": "105.0%",
+      "pred_answer": "26%",
+      "raw": "{\"program\": \"divide(139590, 531822)\", \"answer\": \"26%\"}"
+    },
+    {
+      "question": "what was the average potential anti-dilutive share conversions from 2008 to 2010",
+      "gold": "708716.6",
+      "pred_answer": "614400",
+      "raw": "{\"program\": \"add(256868, 1230881), add(#0, 638401), divide(#1, const_3)\", \"answer\": \"614400\"}"
+    },
+    {
+      "question": "what is the carrying value of notes due by 2017 ? in millions $ .",
+      "gold": "2448",
+      "pred_answer": "1450",
+      "raw": "{\"program\": \"add(750, 700)\", \"answer\": \"1450\"}"
+    },
+    {
+      "question": "for the the quarter ended december 31 , 2006 what was the percent of the total number of shares purchased bought in october",
+      "gold": "48.2%",
+      "pred_answer": "20%",
+      "raw": "{\"program\": \"divide(447700, 2226300)\", \"answer\": \"20%\"}"
+    },
+    {
+      "question": "what are the total contractual commitments , in millions?",
+      "gold": "40294",
+      "pred_answer": "20147",
+      "raw": "{\"program\": \"add(10690, 9457)\", \"answer\": \"20147\"}"
+    }
+  ]
+}

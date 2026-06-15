@@ -1,0 +1,18 @@
+{
+  "num_samples": 883,
+  "gold_available": 426,
+  "avg_chunks_per_sample": 30.516421291053227,
+  "avg_selected_context_words": 265.2921857304643,
+  "bm25_top_n": 50,
+  "dense_model": "",
+  "dense_top_n": 50,
+  "reranker_model": "",
+  "rerank_top_n": 20,
+  "final_top_k": 8,
+  "max_context_words": 700,
+  "recall_at_1": 0.5234741784037559,
+  "recall_at_3": 0.6549295774647887,
+  "recall_at_5": 0.6971830985915493,
+  "recall_at_8": 0.7417840375586855,
+  "recall_at_15": 0.8873239436619719
+}

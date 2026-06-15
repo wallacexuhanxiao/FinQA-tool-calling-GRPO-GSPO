@@ -1,0 +1,294 @@
+{
+  "num_samples": 883,
+  "json_valid_rate": 0.984144960362401,
+  "answer_nonempty_rate": 1.0,
+  "program_nonempty_rate": 0.984144960362401,
+  "answer_exact_match": 0.18799546998867497,
+  "numeric_total": 874,
+  "numeric_accuracy_at_1pct": 0.45537757437070936,
+  "numeric_accuracy_at_5pct": 0.5766590389016019,
+  "scaled_numeric_accuracy_at_1pct": 0.4874141876430206,
+  "scaled_numeric_accuracy_at_5pct": 0.6155606407322655,
+  "program_total": 869,
+  "program_executable_rate": 0.0,
+  "execution_accuracy_at_1pct": null,
+  "execution_accuracy_at_5pct": null,
+  "scaled_execution_accuracy_at_1pct": null,
+  "scaled_execution_accuracy_at_5pct": null,
+  "answer_exec_consistency_at_1pct": null,
+  "answer_exec_consistency_at_5pct": null,
+  "answer_right_exec_wrong_scaled5": 0,
+  "exec_right_answer_wrong_scaled5": 0,
+  "bad_preview": [
+    {
+      "question": "what was jpmorgan chase & co's common equity tier 1 ( cet1 ) ratio in 2008?",
+      "gold": "10.94%",
+      "pred_answer": "0.1092",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"total_tier_1_capital_2008 = 136104; risk_weighted_assets_2008 = 1244659; cet1_ratio_2008 = total_tier_1_capital_2008 / risk_weighted_assets_2008; cet1_ratio_2008\", \"answer\": \"0.1092\"}"
+    },
+    {
+      "question": "at the end of 2014 , the notional value of derivatives designated as hedging instruments under gaap was what percent of the fair value?",
+      "gold": "3044%",
+      "pred_answer": "1595.1",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"let notional_hedging_2013 = 29270; let fair_value_hedging_2013 = 1872 + 152; calculate (notional_hedging_2013 / fair_value_hedging_2013) * 100\", \"answer\": \"1595.1\"}"
+    },
+    {
+      "question": "in millions what was total residential mortgages balance for 2013 and 2012?",
+      "gold": "3576",
+      "pred_answer": "1356, 2220",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"SELECT `december 312013`, `december 312012` FROM table WHERE `in millions` = 'total residential mortgages';\", \"answer\": \"1356, 2220\"}"
+    },
+    {
+      "question": "what was the gross margin decline in fiscal 2004 from 2003?",
+      "gold": ".2",
+      "pred_answer": "551",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"let grossMargin2004 = 2259; let grossMargin2003 = 1708; let decline = grossMargin2004 - grossMargin2003; decline;\", \"answer\": \"551\"}"
+    },
+    {
+      "question": "in 2011 what was the amount of tax related to the unrealized losses reclassifications totaled $ 303 million , or $ 189 million after-tax,",
+      "gold": "114",
+      "pred_answer": "0.396",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"let total_unrealized_loss = 303; let after_tax_unrealized_loss = 189; let tax_rate = (total_unrealized_loss - after_tax_unrealized_loss) / total_unrealized_loss; print(tax_rate)\", \"answer\": \"0.396\"}"
+    },
+    {
+      "question": "if current development costs increased in 2008 as much as in 2007 , what would the 2008 total be , in millions?",
+      "gold": "2057",
+      "pred_answer": "15159",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"development_costs_2007 = 1654; increase_2007 = 1654 - 1251; development_costs_2008 = development_costs_2007 + increase_2007; total_2008 = 13495 + development_costs_2008; total_2008\", \"answer\": 15159}"
+    },
+    {
+      "question": "in 2010 what was the percentage change of the carrying amount of loan receivable net of the allowance",
+      "gold": "-52.5%",
+      "pred_answer": "-49.5%",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"beginning_balance = 920; ending_balance = 469; allowance_beginning = 95; allowance_ending = 77; net_beginning = beginning_balance - allowance_beginning; net_ending = ending_balance - allowance_ending; percentage_change = ((net_ending - net_beginning) / net_beginning) * 100; print(percentage_change)\", \"answer\": \"-49.5%\"}"
+    },
+    {
+      "question": "what is the decline from current future minimum lease payments and the following years expected obligation?\\\\n",
+      "gold": "25%",
+      "pred_answer": "217",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"let currentYearPayments = 1703; let nextYearPayments = 1371 + 1035 + 710; let decline = currentYearPayments - nextYearPayments; decline\", \"answer\": 217}"
+    },
+    {
+      "question": "what percent of inventory is ready for liquidation ( sale ) in 2003?",
+      "gold": ".7283",
+      "pred_answer": "2.22",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"let totalInventory = 527.7; let obsoleteInventory = 11.7; let percentageForLiquidation = (obsoleteInventory / totalInventory) * 100; percentageForLiquidation\", \"answer\": 2.22}"
+    },
+    {
+      "question": "what is the percentage increase in interest expense?",
+      "gold": "2.6%",
+      "pred_answer": "3.257201646090531",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"var old_value = 914 - 23; var new_value = 914; var percentage_increase = ((new_value - old_value) / old_value) * 100; percentage_increase\", \"answer\": 3.257201646090531}"
+    },
+    {
+      "question": "for the period ending in 2016 , what was the average amount of settlements , in millions?",
+      "gold": "11.3",
+      "pred_answer": "373",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"average_settlements = (369 + 373 + 394) / 3; print(int(round(average_settlements, 0)))\", \"answer\": 373}"
+    },
+    {
+      "question": "from the data given , how many square feet have an expiry date in 2020?",
+      "gold": "778000",
+      "pred_answer": "732000",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"total_square_feet = 0\\nfor row in data:\\n    if int(row['lease expiration dates'].split(' ')[-1]) == 2020:\\n        total_square_feet += int(row['occupied square footage'])\\ntotal_square_feet\", \"answer\": \"732000\"}"
+    },
+    {
+      "question": "what is the percentage change in total debt from 2014 to 2015?",
+      "gold": "3.4%",
+      "pred_answer": "-3.37%",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"total_debt_2014 = 29.5; total_debt_2015 = 28.5; percentage_change = ((total_debt_2015 - total_debt_2014) / total_debt_2014) * 100\", \"answer\": \"-3.37%\"}"
+    },
+    {
+      "question": "what was the percentage growth in the operating profit as reported from 2017 to 2018",
+      "gold": "1.4%",
+      "pred_answer": "1.7%",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"let profit2017 = 1194; let profit2018 = 1211; let growth = (profit2018 - profit2017) / profit2017 * 100; growth\", \"answer\": \"1.7%\"}"
+    },
+    {
+      "question": "what are the annual other sinking fund requirements as a percentage of annual long-term debt maturities ( excluding lease obligations ) and annual cash sinking fund requirements for debt outstanding in 2007?",
+      "gold": "6.35%",
+      "pred_answer": "63.52",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"let annual_maturity_2007 = 475288; let other_sinking_fund_2007 = 30200000 / 5; let percentage = (other_sinking_fund_2007 / annual_maturity_2007) * 100; percentage\", \"answer\": 63.52}"
+    },
+    {
+      "question": "what percent increase did inventories receive between 2002 and 2003?",
+      "gold": "1.0485",
+      "pred_answer": "106.55",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"let initial_value = 257.6; let final_value = 527.7; let percent_increase = ((final_value - initial_value) / initial_value) * 100; percent_increase\", \"answer\": 106.55}"
+    },
+    {
+      "question": "on february 112011 what was the market capitalization",
+      "gold": "22556579533.3",
+      "pred_answer": "2288777077.65",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"closing_price = 56.73; outstanding_shares = 397612895; market_capitalization = closing_price * outstanding_shares; print(market_capitalization)\", \"answer\": 2288777077.65}"
+    },
+    {
+      "question": "what was the total of euro notes issued in 2014 , in millions of dollars approximately?",
+      "gold": "3098",
+      "pred_answer": "2401",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"total_euro_notes = 1029 + 1372; print(total_euro_notes)\", \"answer\": \"2401\"}"
+    },
+    {
+      "question": "what was the percent of the increase in non-utility nuclear earnings in 2002",
+      "gold": "57%",
+      "pred_answer": "60.94",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"let initial_earnings_2001 = 128; let final_earnings_2002 = 201; let increase_in_earnings = final_earnings_2002 - initial_earnings_2001; let percent_increase = (increase_in_earnings / initial_earnings_2001) * 100; percent_increase\", \"answer\": 60.94}"
+    },
+    {
+      "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+      "gold": "-6806",
+      "pred_answer": "-4053.33",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"sum = -6129 + -3929 + -2207; average = sum / 3; print(average)\", \"answer\": \"-4053.33\"}"
+    },
+    {
+      "question": "what was the ratio of the gallons hedged in 2017 to 2018",
+      "gold": "4",
+      "pred_answer": "{\"program\": \"gallons_2017 = 12000000\\n\"gallons_2018 = 3000000\\nratio = gallons_2017 / gallons_2018\", \"answer\": \"4\"}",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"gallons_2017 = 12000000\\n\"gallons_2018 = 3000000\\nratio = gallons_2017 / gallons_2018\", \"answer\": \"4\"}"
+    },
+    {
+      "question": "what was the percentage change of our accrued trade liabilities in 2019 compared to 2018",
+      "gold": "-16",
+      "pred_answer": "-3.2",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"let accrued_trade_liabilities_2019 = 484; let accrued_trade_liabilities_2018 = 500; let percentage_change = ((accrued_trade_liabilities_2019 - accrued_trade_liabilities_2018) / accrued_trade_liabilities_2018) * 100; percentage_change\", \"answer\": \"-3.2\"}"
+    },
+    {
+      "question": "what percent higher is the average var for foreign exchange products than that of interest rate products?",
+      "gold": "1.25",
+      "pred_answer": "157.14",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"var_foreign_exchange = (1.8 + 4.7 + 0.3) / 3\\nvar_interest_rate = (1.1 + 2.4 + 0.6) / 3\\npercentage_higher = ((var_foreign_exchange - var_interest_rate) / var_interest_rate) * 100\\npercentage_higher\", \"answer\": \"157.14\"}"
+    },
+    {
+      "question": "what is the roi of nasdaq composite from 2008 to 2009?",
+      "gold": "-41.0%",
+      "pred_answer": "59.03",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"roi_nasdaq = (nasdaq_composite_2009 - nasdaq_composite_2008) / nasdaq_composite_2008 * 100; print(roi_nasdaq)\", \"answer\": \"59.03\"}"
+    },
+    {
+      "question": "what percentage of warehouse locations are in north america?",
+      "gold": "21.3%",
+      "pred_answer": "66.67",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"total_warehouses = 6; north_america_warehouses = 16 + 16 + 3; percentage_north_america = (north_america_warehouses / total_warehouses) * 100\", \"answer\": 66.67}"
+    },
+    {
+      "question": "by how much did the average price per share increase from 2010 to 2011?",
+      "gold": "25.9%",
+      "pred_answer": "16.67",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"let avg_price_2010 = 64.48; let avg_price_2011 = 81.15; let increase = avg_price_2011 - avg_price_2010; increase\", \"answer\": 16.67}"
+    },
+    {
+      "question": "what is the percentage change in net comodities from 2016 to 2017?",
+      "gold": "-35.6%",
+      "pred_answer": "-142.47",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"let commodity2017 = -181; let commodity2016 = 73; let percentageChange = ((commodity2017 - commodity2016) / commodity2016) * 100; percentageChange\", \"answer\": \"-142.47\"}"
+    },
+    {
+      "question": "what are the total contingent payments relating to impella?",
+      "gold": "5583331",
+      "pred_answer": "16749999",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"total_contingent_payments = 5583333 + 5583333 + 5583334; total_contingent_payments\", \"answer\": 16749999}"
+    },
+    {
+      "question": "in 2006 what percentage of consumer packaging sales were represented by foodservice net sales?",
+      "gold": "16%",
+      "pred_answer": "17.1%",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"sales_percentage = (foodservice_sales_2006 / consumer_packaging_sales_2006) * 100; sales_percentage\", \"answer\": \"17.1%\"}"
+    },
+    {
+      "question": "what is the rate of return of an investment in nasdaq from 2017 to 2018?",
+      "gold": "-3.6%",
+      "pred_answer": "0.03804289156626506",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"final_answer = (172.11 - 165.84) / 165.84\", \"answer\": 0.03804289156626506}"
+    }
+  ]
+}

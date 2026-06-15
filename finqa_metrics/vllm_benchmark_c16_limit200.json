@@ -1,0 +1,13 @@
+{
+  "backend": "vllm",
+  "model": "finqa-toolcall-qwen25-7b",
+  "num_requests": 200,
+  "ok_requests": 200,
+  "concurrency": 16,
+  "elapsed_sec": 7.090343667194247,
+  "requests_per_sec": 28.20737744001948,
+  "output_tokens_per_sec": 1057.9176908879306,
+  "latency_p50_sec": 0.506566260010004,
+  "latency_p95_sec": 0.7167246211320162,
+  "latency_mean_sec": 0.5415711274184286
+}

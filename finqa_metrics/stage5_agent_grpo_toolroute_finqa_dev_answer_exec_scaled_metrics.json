@@ -1,0 +1,294 @@
+{
+  "num_samples": 883,
+  "json_valid_rate": 0.9467723669309174,
+  "answer_nonempty_rate": 0.9513023782559457,
+  "program_nonempty_rate": 0.9467723669309174,
+  "answer_exact_match": 0.09739524348810873,
+  "numeric_total": 874,
+  "numeric_accuracy_at_1pct": 0.3123569794050343,
+  "numeric_accuracy_at_5pct": 0.39816933638443935,
+  "scaled_numeric_accuracy_at_1pct": 0.34210526315789475,
+  "scaled_numeric_accuracy_at_5pct": 0.4405034324942792,
+  "program_total": 836,
+  "program_executable_rate": 0.0215311004784689,
+  "execution_accuracy_at_1pct": 0.5,
+  "execution_accuracy_at_5pct": 0.5,
+  "scaled_execution_accuracy_at_1pct": 0.5555555555555556,
+  "scaled_execution_accuracy_at_5pct": 0.5555555555555556,
+  "answer_exec_consistency_at_1pct": 0.7777777777777778,
+  "answer_exec_consistency_at_5pct": 0.7777777777777778,
+  "answer_right_exec_wrong_scaled5": 0,
+  "exec_right_answer_wrong_scaled5": 1,
+  "bad_preview": [
+    {
+      "question": "what is the average payment volume per transaction for american express?",
+      "gold": "127.40",
+      "pred_answer": "5.74",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"SELECT payments_volume(billions), total_transactions(billions) FROM table WHERE company = 'american express' AND payments_volume(billions) IS NOT NULL AND total_transactions(billions) IS NOT NULL; SELECT payments_volume(billions) / total_transactions(billions) FROM selected_table;\", \"answer\": \"5.74\"}"
+    },
+    {
+      "question": "what was the percentage cumulative total return for the five year period ended 31-dec-2017 of citi common stock?",
+      "gold": "93.5%",
+      "pred_answer": "",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"table_row_diff(citi, 31-dec-2012, 31-dec-2017)\"}"
+    },
+    {
+      "question": "what percentage of the total oil and gas mmboe comes from canada?",
+      "gold": "24.69",
+      "pred_answer": "{\"program\": \"((60 / 243) * 100), table_cell_value('canada', 'total (mmboe)', none)\"}, {\"answer\": \"24.691358024691358\"}",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"((60 / 243) * 100), table_cell_value('canada', 'total (mmboe)', none)\"}, {\"answer\": \"24.691358024691358\"}"
+    },
+    {
+      "question": "what are the deferred fuel cost revisions as a percentage of the increase in fuel cost recovery revenues?",
+      "gold": "60.3%",
+      "pred_answer": "const_2}",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"((59.1 / 98.0) * const_1)\", \"answer\": \"const_2}\"}"
+    },
+    {
+      "question": "at the end of 2014 , the notional value of derivatives designated as hedging instruments under gaap was what percent of the fair value?",
+      "gold": "3044%",
+      "pred_answer": "192231.3402825166",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"((29270 / 152) * 100)\", \"answer\": \"192231.3402825166\"}"
+    },
+    {
+      "question": "what was the increase in class a common stock issued and outstanding between years , in thousands?",
+      "gold": "995",
+      "pred_answer": "",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"((339235 - 338240) > 0)\"}"
+    },
+    {
+      "question": "in millions what was total residential mortgages balance for 2013 and 2012?",
+      "gold": "3576",
+      "pred_answer": "1356, 2220",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"Add(1315, 41), Add(2096, 124)\", \"answer\": \"1356, 2220\"}"
+    },
+    {
+      "question": "what was the gross margin decline in fiscal 2004 from 2003?",
+      "gold": ".2",
+      "pred_answer": "{\"program\": \"((27.5 - 27.3) / 27.5) * 100\", \"answer\": \"0.7272727273}\"",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"((27.5 - 27.3) / 27.5) * 100\", \"answer\": \"0.7272727273}\""
+    },
+    {
+      "question": "what percentage of total purchase commitments are due after 2014?",
+      "gold": "56%",
+      "pred_answer": "",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"SELECT SUM(25048), 44572, 25048*100/44572 FROM table_name\"}"
+    },
+    {
+      "question": "what was the change in the weighted average common shares outstanding for diluted computations from 2012 to 2013 , in millions?",
+      "gold": "-1.9",
+      "pred_answer": "1.9",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"326.5-328.4\", \"answer\": \"1.9\"}"
+    },
+    {
+      "question": "in 2011 what was the amount of tax related to the unrealized losses reclassifications totaled $ 303 million , or $ 189 million after-tax,",
+      "gold": "114",
+      "pred_answer": "62.7224946455028",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"189*100/303\", \"answer\": \"62.7224946455028\"}"
+    },
+    {
+      "question": "if current development costs increased in 2008 as much as in 2007 , what would the 2008 total be , in millions?",
+      "gold": "2057",
+      "pred_answer": "1654.0",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"Development costs incurred during the period: const development_2007 = 1654; const development_2008 = development_2007 * 1.0; return development_2008; \", \"answer\": \"1654.0\"}"
+    },
+    {
+      "question": "what percentage of total aggregate contractual obligations is due to purchase obligationst?",
+      "gold": "34%",
+      "pred_answer": "{\"program\": \"const table = [{\\\"(dollars in millions) contractual obligation\\\": \\\"long-term debt\\\", \\\"(dollars in millions) total\\\": \\\"275.1\\\", \\\"(dollars in millions) less than 1 year\\\": \\\"8.6\\\", \\\"(dollars in millions) 1 - 3 years\\\": \\\"13.8\\\", \\\"(dollars in millions) 3 - 5 years\\\": \\\"138.2\\\", \\\"more than 5 years\\\": \\\"114.5\\\"}, {\\\"(dollars in millions) contractual obligation\\\": \\\"capital leases\\\", \\\"(dollars in millions) total\\\": \\\"6.0\\\", \\\"(dollars in millions) less than 1 year\\\": \\\"2014\\\", \\\"(dollars in millions) 1 - 3 years\\\": \\\"2014\\\", \\\"(dollars in millions) 3 - 5 years\\\": \\\"6.0\\\", \\\"more than 5 years\\\": \\\"2014\\\"}, {\\\"(dollars in millions) contractual obligation\\\": \\\"operating leases\\\", \\\"(dollars in millions) total\\\": \\\"62.9\\\", \\\"(dollars in millions) less than 1",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"const table = [{\\\"(dollars in millions) contractual obligation\\\": \\\"long-term debt\\\", \\\"(dollars in millions) total\\\": \\\"275.1\\\", \\\"(dollars in millions) less than 1 year\\\": \\\"8.6\\\", \\\"(dollars in millions) 1 - 3 years\\\": \\\"13.8\\\", \\\"(dollars in millions) 3 - 5 years\\\": \\\"138.2\\\", \\\"more than 5 years\\\": \\\"114.5\\\"}, {\\\"(dollars in millions) contractual obligation\\\": \\\"capital leases\\\", \\\"(dollars in millions) total\\\": \\\"6.0\\\", \\\"(dollars in millions) less than 1 year\\\": \\\"2014\\\", \\\"("
+    },
+    {
+      "question": "in 2010 what was the percentage change of the carrying amount of loan receivable net of the allowance",
+      "gold": "-52.5%",
+      "pred_answer": "19.62%",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"((469-392)/392)*100\", \"answer\": \"19.62%\"}"
+    },
+    {
+      "question": "what is the decline from current future minimum lease payments and the following years expected obligation?\\\\n",
+      "gold": "25%",
+      "pred_answer": "...",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"subtract(1703, 1371), subtract(1371, 1035), subtract(1035, 710), add(...)\", \"answer\": \"...\"}"
+    },
+    {
+      "question": "what is the applied 2019s net sales in 2018 , ( in billions ) ?",
+      "gold": "7.22",
+      "pred_answer": "27.02",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"((2372/100)*2372/18)\", \"answer\": \"27.02\"}"
+    },
+    {
+      "question": "what was the ratio of the pension trust assets for 2017 to 2018",
+      "gold": "1.16",
+      "pred_answer": "0.8999424778326087",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"SELECT CAST(1572 AS FLOAT) / CAST(1739 AS FLOAT)\", \"answer\": \"0.8999424778326087\"}"
+    },
+    {
+      "question": "what percent of inventory is ready for liquidation ( sale ) in 2003?",
+      "gold": ".7283",
+      "pred_answer": "10.0%",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"((52.6/527.7)*100)\", \"answer\": \"10.0%\"}"
+    },
+    {
+      "question": "what is the total value of net operating loss carryforwards?",
+      "gold": "4575515",
+      "pred_answer": "2157503",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"Sum the 'federal' column.\", \"answer\": \"2157503\"}"
+    },
+    {
+      "question": "share of total securities rated bbb/baa or below changed by how many percentage point between 2008 and 2009?",
+      "gold": "-1",
+      "pred_answer": "10",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"((3+2)-((72+3)-(6+72)))\", \"answer\": \"10\"}"
+    },
+    {
+      "question": "what is the expected growth rate in amortization expense from 2016 to 2017?",
+      "gold": "-3.0%",
+      "pred_answer": "3.14%",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"((365.6 - 377.0) / 377.0) * 100\", \"answer\": \"3.14%\"}"
+    },
+    {
+      "question": "what are the payments for entergy arkansas as a percentage of payments for entergy louisiana?",
+      "gold": "33.3%",
+      "pred_answer": "2/6",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"SELECT SUM(`payments (receipts) (in millions)`), SUM(`payments (receipts) (in millions)`) FROM table WHERE `entity` = 'entergy arkansas' AND `entity` = 'entergy louisiana'\", \"answer\": \"2/6\"}"
+    },
+    {
+      "question": "for the period ending in 2016 , what was the average amount of settlements , in millions?",
+      "gold": "11.3",
+      "pred_answer": "13",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"SELECT AVG(`settlements`) FROM table_name WHERE `december 31,` = '2016'\", \"answer\": \"13\"}"
+    },
+    {
+      "question": "what was the percentage change in total net goodwill between 2010 and 2011?",
+      "gold": "-21%",
+      "pred_answer": "80.0",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"table_row_diff('total', 'net goodwill at december 31 2010', 'net goodwill at december 31 2011', None)\", \"answer\": \"80.0\"}"
+    },
+    {
+      "question": "in 2010 what was the ratio of the statutory capital and surplus to the statutory net income",
+      "gold": "4.9",
+      "pred_answer": "2.32",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"SELECT ((bermuda subsidiaries 2010)::float / (bermuda subsidiaries 2010)::float) FROM table WHERE bermuda subsidiaries 2010 = '11798'\", \"answer\": \"2.32\"}"
+    },
+    {
+      "question": "what is the percentage change in total debt from 2014 to 2015?",
+      "gold": "3.4%",
+      "pred_answer": "about -3.36%",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"((28.5 - 29.5) / 29.5) * 100\", \"answer\": \"about -3.36%\"}"
+    },
+    {
+      "question": "what was the difference in operating profit for the americas as a percentage of net sales between 2001 and 2003?",
+      "gold": "3.8",
+      "pred_answer": "{\"program\": \"((51.2 - 47.4) * 100), ((48.3 - 47.4) * 100)\"}, {\"answer\": \"3.8, 0.9\"}",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"((51.2 - 47.4) * 100), ((48.3 - 47.4) * 100)\"}, {\"answer\": \"3.8, 0.9\"}"
+    },
+    {
+      "question": "what was the change in amount of long term debt between 2014 and 2012?",
+      "gold": "28987",
+      "pred_answer": "22898.70",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"((28987 - 0) / 0) * (28987 - 121251)\", \"answer\": \"22898.70\"}"
+    },
+    {
+      "question": "what amount of long-term debt due in the next 36 months as of december 31 , 2003 , in millions?",
+      "gold": "1041.5",
+      "pred_answer": "1428195",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"Sum the values for 2004, 2005, and 2006 from the table.\", \"answer\": \"1428195\"}"
+    },
+    {
+      "question": "what are the annual other sinking fund requirements as a percentage of annual long-term debt maturities ( excluding lease obligations ) and annual cash sinking fund requirements for debt outstanding in 2007?",
+      "gold": "6.35%",
+      "pred_answer": "34.0%",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"table_2007 = ['139952', '$ 475288'] table_2007 = cached_call('interpolate', table_2007, 'linear') final_answer = table_2007 / 139952\", \"answer\": \"34.0%\"}"
+    }
+  ]
+}

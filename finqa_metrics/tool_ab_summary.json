@@ -1,0 +1,38 @@
+{
+  "original": {
+    "num_samples": 883,
+    "json_valid_rate": 0.9988674971687429,
+    "answer_exact_match": 0.39750849377123443,
+    "numeric_accuracy_at_1pct": 0.5892448512585813,
+    "numeric_accuracy_at_5pct": 0.7070938215102975,
+    "scaled_numeric_accuracy_at_1pct": 0.6281464530892449,
+    "scaled_numeric_accuracy_at_5pct": 0.7540045766590389,
+    "program_executable_rate": 0.9671201814058957,
+    "scaled_execution_accuracy_at_5pct": 0.7526377491207503,
+    "answer_exec_consistency_at_5pct": 0.9320046893317703
+  },
+  "calculator_override": {
+    "num_samples": 883,
+    "json_valid_rate": 0.9988674971687429,
+    "answer_exact_match": 0.24009060022650056,
+    "numeric_accuracy_at_1pct": 0.6270022883295194,
+    "numeric_accuracy_at_5pct": 0.7070938215102975,
+    "scaled_numeric_accuracy_at_1pct": 0.6750572082379863,
+    "scaled_numeric_accuracy_at_5pct": 0.7597254004576659,
+    "program_executable_rate": 0.9671201814058957,
+    "scaled_execution_accuracy_at_5pct": 0.7526377491207503,
+    "answer_exec_consistency_at_5pct": 0.9941383352872216
+  },
+  "tool_ab": {
+    "num_samples": 883,
+    "json_valid_rate": 1.0,
+    "answer_exact_match": 0.24122310305775765,
+    "numeric_accuracy_at_1pct": 0.6270022883295194,
+    "numeric_accuracy_at_5pct": 0.7070938215102975,
+    "scaled_numeric_accuracy_at_1pct": 0.6750572082379863,
+    "scaled_numeric_accuracy_at_5pct": 0.7597254004576659,
+    "program_executable_rate": 0.9739524348810872,
+    "scaled_execution_accuracy_at_5pct": 0.7511627906976744,
+    "answer_exec_consistency_at_5pct": 0.9941860465116279
+  }
+}

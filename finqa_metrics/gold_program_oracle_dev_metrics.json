@@ -1,0 +1,16 @@
+{
+  "num_samples": 883,
+  "program_parse_rate": 1.0,
+  "program_executable_rate": 0.9603624009060022,
+  "execution_acc_at_1pct": 0.3867924528301887,
+  "execution_acc_at_5pct": 0.39858490566037735,
+  "scaled_execution_acc_at_1pct": 0.8419811320754716,
+  "scaled_execution_acc_at_5pct": 0.9257075471698113,
+  "unsupported_op_counts": {
+    "table_average": 19,
+    "table_sum": 4,
+    "table_min": 5,
+    "table_max": 7
+  },
+  "bad_count_previewed": 35
+}

@@ -1,0 +1,9 @@
+{
+  "num_samples": 6251,
+  "tool_json_valid_rate": 0.9998400255959047,
+  "calculator_call_rate": 0.9998400255959047,
+  "program_nonempty_rate": 0.9998400255959047,
+  "program_executable_rate": 0.9760038393856982,
+  "scaled_execution_acc_at_1pct": 0.6245400735882258,
+  "scaled_execution_acc_at_5pct": 0.70068788993761
+}

@@ -1,0 +1,294 @@
+{
+  "num_samples": 883,
+  "json_valid_rate": 1.0,
+  "answer_nonempty_rate": 1.0,
+  "program_nonempty_rate": 1.0,
+  "answer_exact_match": 0.318233295583239,
+  "numeric_total": 874,
+  "numeric_accuracy_at_1pct": 0.448512585812357,
+  "numeric_accuracy_at_5pct": 0.5080091533180778,
+  "scaled_numeric_accuracy_at_1pct": 0.5183066361556065,
+  "scaled_numeric_accuracy_at_5pct": 0.5846681922196796,
+  "program_total": 883,
+  "program_executable_rate": 0.9603624009060022,
+  "execution_accuracy_at_1pct": 0.2806603773584906,
+  "execution_accuracy_at_5pct": 0.2936320754716981,
+  "scaled_execution_accuracy_at_1pct": 0.5235849056603774,
+  "scaled_execution_accuracy_at_5pct": 0.5731132075471698,
+  "answer_exec_consistency_at_1pct": 0.8950471698113207,
+  "answer_exec_consistency_at_5pct": 0.9516509433962265,
+  "answer_right_exec_wrong_scaled5": 7,
+  "exec_right_answer_wrong_scaled5": 10,
+  "bad_preview": [
+    {
+      "question": "at the end of 2014 , the notional value of derivatives designated as hedging instruments under gaap was what percent of the fair value?",
+      "gold": "3044%",
+      "pred_answer": "30.3",
+      "exec_value": 30.443229604709842,
+      "exec_ok": true,
+      "exec_scaled_ok5": true,
+      "raw": "{\"program\": \"divide(36197, 1189)\", \"answer\": \"30.3\"}"
+    },
+    {
+      "question": "in 2011 what was the amount of tax related to the unrealized losses reclassifications totaled $ 303 million , or $ 189 million after-tax,",
+      "gold": "114",
+      "pred_answer": "1.6",
+      "exec_value": 1.6031746031746033,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"divide(303, 189)\", \"answer\": \"1.6\"}"
+    },
+    {
+      "question": "if current development costs increased in 2008 as much as in 2007 , what would the 2008 total be , in millions?",
+      "gold": "2057",
+      "pred_answer": "2905",
+      "exec_value": 2905.0,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"add(1654, 1251)\", \"answer\": \"2905\"}"
+    },
+    {
+      "question": "in 2010 what was the percentage change of the carrying amount of loan receivable net of the allowance",
+      "gold": "-52.5%",
+      "pred_answer": "-451",
+      "exec_value": -451.0,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"subtract(469, 920)\", \"answer\": \"-451\"}"
+    },
+    {
+      "question": "what is the decline from current future minimum lease payments and the following years expected obligation?\\\\n",
+      "gold": "25%",
+      "pred_answer": ".353",
+      "exec_value": 0.353392820087155,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"divide(1703, 4819)\", \"answer\": \".353\"}"
+    },
+    {
+      "question": "what was the ratio of the pension trust assets for 2017 to 2018",
+      "gold": "1.16",
+      "pred_answer": "1.1",
+      "exec_value": 1.106234096692112,
+      "exec_ok": true,
+      "exec_scaled_ok5": true,
+      "raw": "{\"program\": \"divide(1739, 1572)\", \"answer\": \"1.1\"}"
+    },
+    {
+      "question": "what percent of inventory is ready for liquidation ( sale ) in 2003?",
+      "gold": ".7283",
+      "pred_answer": "2.2%",
+      "exec_value": 0.022171688459351902,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"divide(11.7, 527.7)\", \"answer\": \"2.2%\"}"
+    },
+    {
+      "question": "what is the total value of net operating loss carryforwards?",
+      "gold": "4575515",
+      "pred_answer": "4.6",
+      "exec_value": 4.6,
+      "exec_ok": true,
+      "exec_scaled_ok5": true,
+      "raw": "{\"program\": \"add(2.2, 2.4)\", \"answer\": \"4.6\"}"
+    },
+    {
+      "question": "what is the percent change in annual long-term debt maturities from 2016 to 2017?",
+      "gold": "276%",
+      "pred_answer": "562372",
+      "exec_value": 562372.0,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"subtract(766451, 204079)\", \"answer\": \"562372\"}"
+    },
+    {
+      "question": "what is the expected growth rate in amortization expense from 2016 to 2017?",
+      "gold": "-3.0%",
+      "pred_answer": "-11.4",
+      "exec_value": -11.399999999999977,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"subtract(365.6, 377.0)\", \"answer\": \"-11.4\"}"
+    },
+    {
+      "question": "what are the payments for entergy arkansas as a percentage of payments for entergy louisiana?",
+      "gold": "33.3%",
+      "pred_answer": ".33",
+      "exec_value": 0.3333333333333333,
+      "exec_ok": true,
+      "exec_scaled_ok5": true,
+      "raw": "{\"program\": \"divide(2, 6)\", \"answer\": \".33\"}"
+    },
+    {
+      "question": "for the period ending in 2016 , what was the average amount of settlements , in millions?",
+      "gold": "11.3",
+      "pred_answer": "-13",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"table_average(settlements, none)\", \"answer\": \"-13\"}"
+    },
+    {
+      "question": "what was the percentage change in total net goodwill between 2010 and 2011?",
+      "gold": "-21%",
+      "pred_answer": "-492",
+      "exec_value": -492.0,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"subtract(1891, 2383)\", \"answer\": \"-492\"}"
+    },
+    {
+      "question": "what was the difference in dollars of the high low sale price for the common stock in the fourth quarter of 2002?",
+      "gold": "2.62",
+      "pred_answer": "16.89",
+      "exec_value": 16.89,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"subtract(17.84, 0.95)\", \"answer\": \"16.89\"}"
+    },
+    {
+      "question": "what is the percentage change in total debt from 2014 to 2015?",
+      "gold": "3.4%",
+      "pred_answer": "-1",
+      "exec_value": -1.0,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"subtract(28.5, 29.5)\", \"answer\": \"-1\"}"
+    },
+    {
+      "question": "what was the difference in operating profit for the americas as a percentage of net sales between 2001 and 2003?",
+      "gold": "3.8",
+      "pred_answer": "0.9",
+      "exec_value": 0.8999999999999986,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"subtract(48.3, 47.4)\", \"answer\": \"0.9\"}"
+    },
+    {
+      "question": "what amount of long-term debt due in the next 36 months as of december 31 , 2003 , in millions?",
+      "gold": "1041.5",
+      "pred_answer": "965635",
+      "exec_value": 965635.0,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"add(503215, 462420)\", \"answer\": \"965635\"}"
+    },
+    {
+      "question": "what is the growth rate in operating profit for space systems in 2011?",
+      "gold": "3.2%",
+      "pred_answer": "33",
+      "exec_value": 33.0,
+      "exec_ok": true,
+      "exec_scaled_ok5": true,
+      "raw": "{\"program\": \"subtract(1063, 1030)\", \"answer\": \"33\"}"
+    },
+    {
+      "question": "what are the annual other sinking fund requirements as a percentage of annual long-term debt maturities ( excluding lease obligations ) and annual cash sinking fund requirements for debt outstanding in 2007?",
+      "gold": "6.35%",
+      "pred_answer": "0.0635",
+      "exec_value": 6.35404218074094e-05,
+      "exec_ok": true,
+      "exec_scaled_ok5": true,
+      "raw": "{\"program\": \"divide(30.2, 475288)\", \"answer\": \"0.0635\"}"
+    },
+    {
+      "question": "what percent increase did inventories receive between 2002 and 2003?",
+      "gold": "1.0485",
+      "pred_answer": "270.1",
+      "exec_value": 270.1,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"subtract(527.7, 257.6)\", \"answer\": \"270.1\"}"
+    },
+    {
+      "question": "on february 112011 what was the market capitalization",
+      "gold": "22556579533.3",
+      "pred_answer": "2251241441",
+      "exec_value": 22556579533.35,
+      "exec_ok": true,
+      "exec_scaled_ok5": true,
+      "raw": "{\"program\": \"multiply(56.73, 397612895)\", \"answer\": \"2251241441\"}"
+    },
+    {
+      "question": "what was the total of euro notes issued in 2014 , in millions of dollars approximately?",
+      "gold": "3098",
+      "pred_answer": "2401",
+      "exec_value": 2401.0,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"add(1029, 1372)\", \"answer\": \"2401\"}"
+    },
+    {
+      "question": "what was the percent of the increase in non-utility nuclear earnings in 2002",
+      "gold": "57%",
+      "pred_answer": "73",
+      "exec_value": 73.0,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"subtract(201, 128)\", \"answer\": \"73\"}"
+    },
+    {
+      "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+      "gold": "-6806",
+      "pred_answer": "-4829",
+      "exec_value": null,
+      "exec_ok": false,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"table_average(currency translation adjustments, none)\", \"answer\": \"-4829\"}"
+    },
+    {
+      "question": "what percentage of the total purchase price is represented by goodwill?",
+      "gold": "22%",
+      "pred_answer": "0.022",
+      "exec_value": 0.00021650534895568008,
+      "exec_ok": true,
+      "exec_scaled_ok5": true,
+      "raw": "{\"program\": \"divide(3.4, 15704)\", \"answer\": \"0.022\"}"
+    },
+    {
+      "question": "what percent higher is the average var for foreign exchange products than that of interest rate products?",
+      "gold": "1.25",
+      "pred_answer": "1.64",
+      "exec_value": 1.6363636363636362,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"divide(1.8, 1.1)\", \"answer\": \"1.64\"}"
+    },
+    {
+      "question": "what are the cost reduction initiatives as a percentage of the operating companies income increase?",
+      "gold": "166%",
+      "pred_answer": "1.65",
+      "exec_value": 1.6638655462184875,
+      "exec_ok": true,
+      "exec_scaled_ok5": true,
+      "raw": "{\"program\": \"divide(198, 119)\", \"answer\": \"1.65\"}"
+    },
+    {
+      "question": "by how much did the average price per share increase from 2010 to 2011?",
+      "gold": "25.9%",
+      "pred_answer": "16.67",
+      "exec_value": 16.67,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"subtract(81.15, 64.48)\", \"answer\": \"16.67\"}"
+    },
+    {
+      "question": "what portion of the total notes payable comes from u.s . commercial paper?",
+      "gold": "78.3%",
+      "pred_answer": "0.78",
+      "exec_value": 0.7825261158594492,
+      "exec_ok": true,
+      "exec_scaled_ok5": true,
+      "raw": "{\"program\": \"divide(412.0, 526.5)\", \"answer\": \"0.78\"}"
+    },
+    {
+      "question": "what is the percentage change in net comodities from 2016 to 2017?",
+      "gold": "-35.6%",
+      "pred_answer": "-26",
+      "exec_value": -26.0,
+      "exec_ok": true,
+      "exec_scaled_ok5": false,
+      "raw": "{\"program\": \"subtract(47, 73)\", \"answer\": \"-26\"}"
+    }
+  ]
+}
